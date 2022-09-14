@@ -1,23 +1,22 @@
 package test;
 
-import beans.Mascota;
+import beans.Servicio;
 import connection.DBConnection;
-import java.sql.Date;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
 public class OperacionesBD {
 
     public static void main(String[] args) {
-        actualizarMascota(1, "Gato");
-        listarMascota();
+        actualizarServicio(" ", " ");
+        listarServicio();
 
     }
 
-    public static void actualizarMascota(int id, String especie) {
+    public static void actualizarServicio(String tipoServicio, String costo) {
 
         DBConnection con = new DBConnection();
-        String sql = "UPDATE mascota SET genero = '" + especie + "' WHERE id = " + id;
+        String sql = "UPDATE servicio SET tipo_servicio = '" + costo + "' WHERE id = " + tipoServicio;
         try {
             Statement st = con.getConnection().createStatement();
             st.executeUpdate(sql);
@@ -29,26 +28,22 @@ public class OperacionesBD {
         }
     }
 
-    public static void listarMascota() {
+    public static void listarServicio() {
 
         DBConnection con = new DBConnection();
-        String sql = "SELECT * FROM mascota";
+        String sql = "SELECT * FROM servicio";
         try {
             Statement st = con.getConnection().createStatement();
             ResultSet rs = st.executeQuery(sql);
             while (rs.next()) {
-                int i = rs.getInt("id");
-                String userName = rs.getString("userName");
-                String nombre= rs.getString("nombre");
-                String especie= rs.getString("especie");
-                String color= rs.getString("color");
-                Date fecha= rs.getDate("fecha");
-                String sexo= rs.getString("sexo");
-                String raza= rs.getString("raza");
+                String tipoServico= rs.getString("tipo_servicio");
+                String costo= rs.getString("costo");
+                String descripcion= rs.getString("descripcion");
+                String recomendacion= rs.getString("recomendacion");
+              
+                Servicio servicios = new Servicio(tipoServico, costo, descripcion, recomendacion);
 
-                Mascota mascotas = new Mascota(i, userName, nombre,especie,color, fecha, sexo, raza);
-
-                System.out.println(mascotas.toString());
+                System.out.println(servicios.toString());
 
             }
 
