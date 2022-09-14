@@ -5,12 +5,12 @@ import java.sql.Date;
 
 public class Agenda {
     private Date fechaHoraServicio;// Se importa como sql.Date
-    private int id;
+    private String user_name;
     private String tipoServicio;
 
-    public Agenda(Date fechaHoraServicio, int id, String tipoServicio) {
+    public Agenda(Date fechaHoraServicio, String user_name, String tipoServicio) {
         this.fechaHoraServicio = fechaHoraServicio;
-        this.id = id;
+        this.user_name = user_name;
         this.tipoServicio = tipoServicio;
     }
 
@@ -22,12 +22,12 @@ public class Agenda {
         this.fechaHoraServicio = fechaHoraServicio;
     }
 
-    public int getId() {
-        return id;
+    public String getUser_name() {
+        return user_name;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setUser_name(String user_name) {
+        this.user_name = user_name;
     }
 
     public String getTipoServicio() {
@@ -40,8 +40,9 @@ public class Agenda {
 
     @Override
     public String toString() {
-        return "Agenda{" + "fechaHoraServicio=" + fechaHoraServicio + ", id=" + id + ", tipoServicio=" + tipoServicio + '}';
+        return "Agenda{" + "fechaHoraServicio=" + fechaHoraServicio + ", user_name=" + user_name + ", tipoServicio=" + tipoServicio + '}';
     }
+
     
     
 }
