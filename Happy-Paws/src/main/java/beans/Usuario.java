@@ -1,26 +1,39 @@
-
+        
 package beans;
+ import java.sql.Date;
 
 public class Usuario {
     
     private String userName;
     private String cedula;
-    private String nombre;
+    private String nombreUsuario;
     private String apellido;
     private String direccion;
     private String telefono;
     private String correo;
     private String pin;
+    private String nombreMascota;
+    private String especie;
+    private Date fecha;            // Se importa como sql.Date
+    private String color;
+    private String sexo;
+    private String raza;
 
-    public Usuario(String userName, String cedula, String nombre, String apellido, String direccion, String telefono, String correo, String pin) {
+    public Usuario(String userName, String cedula, String nombreUsuario, String apellido, String direccion, String telefono, String correo, String pin, String nombreMascota, String especie, Date fecha, String color, String sexo, String raza) {
         this.userName = userName;
         this.cedula = cedula;
-        this.nombre = nombre;
+        this.nombreUsuario = nombreUsuario;
         this.apellido = apellido;
         this.direccion = direccion;
         this.telefono = telefono;
         this.correo = correo;
         this.pin = pin;
+        this.nombreMascota = nombreMascota;
+        this.especie = especie;
+        this.fecha = fecha;
+        this.color = color;
+        this.sexo = sexo;
+        this.raza = raza;
     }
 
     public String getUserName() {
@@ -39,12 +52,12 @@ public class Usuario {
         this.cedula = cedula;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getNombreUsuario() {
+        return nombreUsuario;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setNombreUsuario(String nombreUsuario) {
+        this.nombreUsuario = nombreUsuario;
     }
 
     public String getApellido() {
@@ -87,10 +100,60 @@ public class Usuario {
         this.pin = pin;
     }
 
+    public String getNombreMascota() {
+        return nombreMascota;
+    }
+
+    public void setNombreMascota(String nombreMascota) {
+        this.nombreMascota = nombreMascota;
+    }
+
+    public String getEspecie() {
+        return especie;
+    }
+
+    public void setEspecie(String especie) {
+        this.especie = especie;
+    }
+
+    public Date getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(Date fecha) {
+        this.fecha = fecha;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public String getSexo() {
+        return sexo;
+    }
+
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
+    }
+
+    public String getRaza() {
+        return raza;
+    }
+
+    public void setRaza(String raza) {
+        this.raza = raza;
+    }
+
     @Override
     public String toString() {
-        return "Usuario{" + "userName=" + userName + ", cedula=" + cedula + ", nombre=" + nombre + ", apellido=" + apellido + ", direccion=" + direccion + ", telefono=" + telefono + ", correo=" + correo + ", pin=" + pin + '}';
+        return "Usuario{" + "userName=" + userName + ", cedula=" + cedula + ", nombreUsuario=" + nombreUsuario + ", apellido=" + apellido + ", direccion=" + direccion + ", telefono=" + telefono + ", correo=" + correo + ", pin=" + pin + ", nombreMascota=" + nombreMascota + ", especie=" + especie + ", fecha=" + fecha + ", color=" + color + ", sexo=" + sexo + ", raza=" + raza + '}';
     }
-    
+
+   
+   
     
 }
