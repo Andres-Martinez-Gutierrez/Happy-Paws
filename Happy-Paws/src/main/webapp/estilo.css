@@ -1,0 +1,121 @@
+body{
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    background-color: white;
+}
+
+h1{
+    font-size: 3em;
+    text-align: center;
+    padding: 400px 50px 20px;;
+}
+
+.datos{
+    color: white;
+    font-size: 2em;
+    /*transform: rotate(-90deg);*/
+    justify-content: stretch;
+    margin: 50px;
+}
+
+.left{
+    background: white;
+    height: 100vh;
+    width: 40%;
+}
+
+.right{
+    background: #2c3c54;
+    width: 60%;
+    height: 100vh;
+}
+
+#pantallaDiv{
+    display: flex;
+}
+
+.flex-container {
+    display:flex;
+    align-items:flex-end;
+    flex-wrap: wrap;
+    justify-content: stretch;
+    background: #2c3c54;
+}
+
+.form{
+    display: grid;
+    gap: 4px;
+    grid-template-columns: 1fr 1fr;
+    min-width: 400px;
+    text-align:left;
+    padding: 20px;
+    border: 10px;
+}
+
+.form_input, .opcion{
+    width: 350px;
+    padding: 10px;
+    margin: 2px 0;
+    border-radius: 5px;
+    height: 40px;
+}
+
+.form-img{
+    flex: 2;
+    width: 100%;
+}
+
+img{
+    position: absolute;
+    top:11%;
+    left: 10%;
+    transform: translate(-11%, -10%);
+}
+
+.form-img img{
+    width: 100px;
+    display:block; 
+    object-fit: cover;
+    display: grid;
+    gap: 4px;
+    grid-template-columns: 1fr 1fr;
+}
+
+label{
+    color: white;
+}
+
+.form__btn{
+    height: 55px;
+    line-height: 45px;
+    width: 30%;
+    background: #2c3c54;
+    color:white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor:pointer;
+    transition: .1s ease all;
+    position:relative;
+    top: 75%;
+    left: 35%;
+}
+
+.form__btn:hover{
+    box-shadow: 3px 0px 30px rgba(163, 163, 163, 1);
+}
+
+.formulario__mensaje-exito{
+    font-size: 14px;
+    color: #119200;
+    display: none;
+
+}
+
+.formulario__mensaje-exito-activo{
+    display: block;
+}
+
