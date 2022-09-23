@@ -5,13 +5,13 @@ public class Servicio {
     private String tipoServicio;
     private String costo;
     private String descripcion;
-    private String recomendacion;
+    private String recomendaciones;
 
-    public Servicio(String tipoServicio, String costo, String descripcion, String recomendacion) {
+    public Servicio(String tipoServicio, String costo, String descripcion, String recomendaciones) {
         this.tipoServicio = tipoServicio;
         this.costo = costo;
         this.descripcion = descripcion;
-        this.recomendacion = recomendacion;
+        this.recomendaciones = recomendaciones;
     }
 
     public String getTipoServicio() {
@@ -38,17 +38,17 @@ public class Servicio {
         this.descripcion = descripcion;
     }
 
-    public String getRecomendacion() {
-        return recomendacion;
+    public String getRecomendaciones() {
+        return recomendaciones;
     }
 
-    public void setRecomendacion(String recomendacion) {
-        this.recomendacion = recomendacion;
+    public void setRecomendaciones(String recomendaciones) {
+        this.recomendaciones = recomendaciones;
     }
 
     @Override
     public String toString() {
-        return "Servicio{" + "tipoServicio=" + tipoServicio + ", costo=" + costo + ", descripcion=" + descripcion + ", recomendacion=" + recomendacion + '}';
+        return "Servicio{" + "tipoServicio=" + tipoServicio + ", costo=" + costo + ", descripcion=" + descripcion + ", recomendaciones=" + recomendaciones + '}';
     }
     
     

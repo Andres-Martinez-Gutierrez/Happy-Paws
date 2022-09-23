@@ -8,7 +8,7 @@ import java.sql.Statement;
 public class OperacionesBD {
 
     public static void main(String[] args) {
-        actualizarServicio(" ", " ");
+        actualizarServicio("$ 25.000  ", "Consultas");
         listarServicio();
 
     }
@@ -16,7 +16,7 @@ public class OperacionesBD {
     public static void actualizarServicio(String tipoServicio, String costo) {
 
         DBConnection con = new DBConnection();
-        String sql = "UPDATE servicio SET tipo_servicio = '" + costo + "' WHERE id = " + tipoServicio;
+        String sql = "UPDATE servicio SET costo = '" + costo + "' WHERE tipo_servicio = " + tipoServicio;
         try {
             Statement st = con.getConnection().createStatement();
             st.executeUpdate(sql);
@@ -39,9 +39,9 @@ public class OperacionesBD {
                 String tipoServico= rs.getString("tipo_servicio");
                 String costo= rs.getString("costo");
                 String descripcion= rs.getString("descripcion");
-                String recomendacion= rs.getString("recomendacion");
+                String recomendaciones= rs.getString("recomendaciones");
               
-                Servicio servicios = new Servicio(tipoServico, costo, descripcion, recomendacion);
+                Servicio servicios = new Servicio(tipoServico, costo, descripcion, recomendaciones);
 
                 System.out.println(servicios.toString());
 
