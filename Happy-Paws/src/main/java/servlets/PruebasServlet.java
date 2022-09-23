@@ -1,5 +1,5 @@
 
-package servlet;
+package servlets;
 
 public class PruebasServlet {
     
