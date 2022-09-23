@@ -6,11 +6,7 @@ $(document).ready(function () {
         autenticarUsuario();
     });
 
-    $("#form-register").submit(function (event) {
 
-        event.preventDefault();
-        registrarUsuario();
-    });
 
 
 });
