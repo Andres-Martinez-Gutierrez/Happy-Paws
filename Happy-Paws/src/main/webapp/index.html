@@ -1,10 +1,146 @@
 <!DOCTYPE html>
-<html>
+<html> 
     <head>
-        <title>Start Page</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    </head>
+        <!--comentario-->
+        <title>HappyPaws</title>
+        <link rel="stylesheet" type="text/css" href="estilo.css">
+        <link href="stylesheet" type="text/css" href="normalize.css">
+    </head> 
     <body>
-        <h1>Hello World!</h1>
+        
+        <section id="pantallaDiv">
+            <div class="left">
+                <div class="form_img">
+                    <img src="logo.png">
+                </div>
+                <h1>Formulario de<br>registro</h1>
+
+                <div class="form__grupo">
+                    <button type="submit" class="form__btn">Enviar</button>
+                    <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Cuenta creada con exito</p>
+                </div>
+            </div>
+
+            <div class="right">
+                <h3 class="datos">Tus datos personales</h3>
+                <form class="form">
+                    <!--Nombres-->
+                    <div class="form_section" id="nombres">
+                        <label for="nombre" class="form__label">Nombres*</label>
+                        <div class="form__grupo-input">
+                            <input type="text" class="form_input" name= "nombre" id="nombre" placeholder = "Nombres">
+                        </div>
+                    </div>
+                    <!--Apellidos-->
+                    <div class="form_section">
+                        <label for="apellidos" class="form__label">Apellidos*</label>
+                        <div class="form__grupo-input">
+                            <input type="text" class="form_input" name="apellidos" id="apellidos" placeholder="Apellidos">
+                        </div>
+                    </div>
+                    <!--Cedula-->
+                    <div class="form_section">
+                        <label for="cedula" class="form__label">Cedula de Ciudadania*</label>
+                        <div class="form__grupo-input">
+                            <input type="text" class="form_input" name="cedula" placeholder="C.C.">
+                        </div>
+                    </div>
+                    <!--Correo-->
+                    <div class="form_section">
+                        <label for="correo" class="form__label">Correo Electronico*</label>
+                        <div class="form__grupo-input">
+                            <input type="email" class="form_input" name="correo" placeholder="@gmail.com">
+                        </div>
+                    </div>
+                    <!--Direccion-->
+                    <div class="form_section">
+                        <label for="direccion" class="form__label">Direccion*</label>
+                        <div class="form__grupo-input">
+                            <input type="text" class="form_input" name="direccion" placeholder="Direccion">
+                        </div>
+                    </div>
+                    <!--Telefono-->
+                    <div class="form_section">
+                        <label for="telefono" class="form__label">Telefono de Contacto*</label>
+                        <div class="form__grupo-input">
+                            <input type="text" class="form_input" name="telefono" placeholder="Telefono">
+                        </div>
+                    </div>
+                    <!--Usuario-->
+                    <div class="form_section">
+                        <label for="usuario" class="form__label">Usuario*</label>
+                        <div class="form__grupo-input">
+                            <input type="text" class="form_input" name="usuario" placeholder="Nombre de usuario">
+                        </div>
+                    </div>
+                    <!--PIN-->
+                    <div class="form_section">
+                        <label for="pin" class="form__label">PIN*</label>
+                        <div class="form__grupo-input">
+                            <input type="text" class="form_input" name="pin" placeholder="4 ultimos digitos de la C.C.">
+                        </div>
+                    </div>
+
+                    <!--Nombre Mascota-->
+                    <div class="form_section" id="nombres">
+                        <label for="nombre" class="form__label">Nombre*</label>
+                        <div class="form__grupo-input">
+                            <input type="text" class="form_input" name= "nombreM" id="nombreM" placeholder = "Nombre de la Mascota">
+                        </div>
+                    </div>
+                    <!--Fecha de nacimiento-->
+                    <div class="form_section">
+                        <label for="fechaNacimiento" class="form__label">Fecha de Nacimiento*</label>
+                        <div class="form__grupo-input">
+                            <input type="date" class="form_input" name="fechaNacimiento" id="fechaNacimiento" placeholder="Fecha de nacimiento">
+                        </div>
+                    </div>
+                    <!--Especie-->
+                    <div class="form_section">
+                        <label for="especie" class="form__label">Especie*</label>
+                        <div class="form__grupo-input">
+                            <select class="opcion" name="especie">
+                                <option value="Seleccione">Seleccione</option>
+                                <option value="Felino">Felino</option>
+                                <option value="Canino">Canino</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!--Raza-->
+                    <div class="form_section">
+                        <label for="raza" class="form__label">Raza*</label>
+                        <div class="form__grupo-input">
+                            <input type="text" class="form_input" name="raza" placeholder="Raza">
+                        </div>
+                    </div>
+                    <!--Sexo-->
+                    <div class="form_section">
+                        <label for="sexo" class="form__label">Sexo*</label>
+                        <div class="form__grupo-input">
+                            <select class="opcion" name="sexo">
+                                <option value="Seleccione">Seleccione</option>
+                                <option value="Hembra">Hembra</option>
+                                <option value="Macho">Macho</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!--Color-->
+                    <div class="form_section">
+                        <label for="color" class="form__label">Color</label>
+                        <div class="form__grupo-input">
+                            <input type="text" class="form_input" name="color" placeholder="Color">   
+                        </div>
+                    </div>
+                    <!--Fecha de la ultima vacunacion-->
+                    <div class="form_section">
+                        <label for="ultimaVacuna" class="form__label">Fecha de la ultima vacunacion*</label>
+                        <div class="form__grupo-input">
+                            <input type="date" class="form_input" name="ultimaVacuna">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
     </body>
 </html>
+
