@@ -140,7 +140,7 @@ inputs.forEach((input) => {
 enviarDatos.addEventListener('submit', (e) => {
     e.preventDefault();
 
-	if(campos.nombre && campos.apellidos && campos.cedula && campos.email && campos.direccion && campos.telefono && campos.nameUsuario && campos.id && campos.nombreMascota /*&& campos.fechaNacimiento && campos.especie*/ && campos.raza /*&& campos.sexo*/ && campos.color){
+	if(campos.nombre && campos.apellidos && campos.cedula && campos.email && campos.direccion && campos.telefono && campos.nameUsuario && campos.id && campos.nombreMascota /*&& campos.fechaNacimiento*/ && campos.especie && campos.raza /*&& campos.sexo*/ && campos.color){
 		formulario.reset();//Se reinician todos los campos del formulario
         document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo');
 		setTimeout(() => {
