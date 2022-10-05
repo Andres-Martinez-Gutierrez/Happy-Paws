@@ -28,7 +28,7 @@ function autenticarUsuario() {
             let parsedResult = JSON.parse(result);
             if (parsedResult != false) {
                 $("#login-error").addClass("d-none");
-                let user_name= parsedResult['user_name'];
+                let user_name = parsedResult['user_name'];
                 document.location.href = "home.html?user_name=" + user_name;
             } else {
                 $("#login-error").removeClass("d-none");
@@ -38,29 +38,42 @@ function autenticarUsuario() {
 }
 function registrarUsuario() {
 
+    let cedula = $("#input-cedula").val();
     let username = $("#input-username").val();
-    let contrasena = $("#input-contrasena").val();
-    let contrasenaConfirmacion = $("#input-contrasena-repeat").val();
-    let nombre = $("#input-nombre").val();
     let apellido = $("#input-apellido").val();
-    let email = $("#input-email").val();
-    let saldo = $("#input-saldo").val();
-    let premium = $("#input-premium").prop("checked");
+    let direccion = $("#input-direccion").val();
+    let telefono = $("#input-telefono").val();
+    let correo = $("#input-email").val();
+    let pin = $("#input-pin").val();
+    let pin2 = $("#input-pin2").val();
+    let nombreMascota = $("#input-nombreMascota").val();
+    let especie = $("#input-especie").val();
+    let fecha = $("#input-fecha").val();
+    let color = $("#input-color").val();
+    let sexo = $("#input-sexo").val();
+    let raza = $("#input-raza").val();
 
-    if (contrasena == contrasenaConfirmacion) {
+    if (pin == pin2) {
 
         $.ajax({
             type: "GET",
             dataType: "html",
             url: "./ServletUsuarioRegister",
             data: $.param({
+                cedula: cedula,
                 username: username,
-                contrasena: contrasena,
-                nombre: nombre,
                 apellido: apellido,
-                email: email,
-                saldo: saldo,
-                premium: premium
+                direccion: direccion,
+                telefono: telefono,
+                correo: correo,
+                pin: pin,
+                pin2: pin2,
+                nombreMascota: nombreMascota,
+                especie: especie,
+                fecha: fecha,
+                color: color,
+                sexo: sexo,
+                raza: raza
             }),
             success: function (result) {
                 let parsedResult = JSON.parse(result);
