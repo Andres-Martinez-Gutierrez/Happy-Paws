@@ -1,125 +1,101 @@
 <!DOCTYPE html>
-<html> 
+<html>
     <head>
-        <title>HappyPaws</title>
-        <link rel="stylesheet" type="text/css" href="css/estilo.css">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <!--<link href="stylesheet" type="text/css" algo="css/normalize.css">-->
-    </head> 
+        <title>Registro</title>
+        <!-- Favicon navegador -->
+        <link rel="icon" href="img/patas.png"/>
+        
+        <meta charset="UTF-8">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <!-- Latest compiled and minified CSS -->
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+            <!-- jQuery library -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+            <!-- Popper JS -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+            <!-- Latest compiled JavaScript -->
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="js/index.js"></script>
+        <link href="css/index.css" rel="stylesheet">
+        <title>Registro de Usuarios</title>
+    </head>
     <body>
-
-        <div class="contenedor">
-            <div class="agrupar-contenido">
-                <div class="confirmar-registro">
-                    <div class="form_img">
-                        <img src="img/logo.png">
-                    </div>
-                    <p class="block">
-                        <h1>Formulario de registro</h1>
-                    </p>
-                    <form action="" id="enviarDatos">
-                        <p class="formulario__grupo formulario__grupo-btn-enviar">
-                            <button type="submit" class="form__btn">Enviar</button>
-                            <div class="formulario__mensaje" id="formulario__mensaje">
-                                <p><i class="fa fa-exclamation-triangle"></i> <b>Error:</b> Ingrese bien los datos. </p>
+        <nav class="navbar navbar-dark bg-dark">
+            <a class="navbar-brand" href="index.html">Registro de Usuarios</a>
+        </nav>
+        <main class="p-4 d-flex justify-content-center">
+            <div class="card sizeDiv">
+                <div class="card-body">
+                    <form id="form-register" class="pb-4">
+                        
+                        <div class="form-group">
+                            <label for="input-username">Nombre de usuario</label>
+                            <input type="text" class="form-control" id="input-username" placeholder="Nombre de usuario" required>
+                        </div>
+                        <div class="form-group">
+                                <label for="input-cedula">Cedula</label>
+                            <input type="number" class="form-control" id="input-cedula" placeholder="Cedula" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="input-nombre">Nombre</label>
+                            <input type="text" class="form-control" id="input-nombre" placeholder="Nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="input-apellido">Apellidos</label>
+                            <input type="text" class="form-control" id="input-apellido" placeholder="Apellidos" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="input-direccion">Direccion</label>
+                            <input type="text" class="form-control" id="input-direccion" placeholder="Direccion" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="input-telefono">Telefono</label>
+                            <input type="text" class="form-control" id="input-telefono" placeholder="Telefono" required>
+                        </div>
+                        <div class="form-group">
+                                <label for="input-correo">Correo</label>
+                            <input type="text" class="form-control" id="input-correo" placeholder="Correo" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="input-pin">Pin</label>
+                                <input type="password" class="form-control" id="input-pin" placeholder="Pin" required>
                             </div>
-                            <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Cuenta creada con exito</p>
-                        </p>
+                            <div class="form-group col-md-6">
+                                <label for="input-pin-repeat">Repetir Pin</label>
+                                <input type="password" class="form-control" id="input-pin-repeat" placeholder="Repetir Pin" required>
+                            </div>
+                        </div>
+                         <div class="form-group">
+                            <label for="input-nombreMascota">Nombre de la Mascota</label>
+                            <input type="text" class="form-control" id="input-nombreMascota" placeholder="Nombre de la Mascota" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="input-especie">Especie</label>
+                            <input type="text" class="form-control" id="input-especie" placeholder="Especie" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="input-colorMascota">Color</label>
+                            <input type="text" class="form-control" id="input-colorMascota" placeholder="Color" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="input-sexoMascota">Sexo</label>
+                            <input type="text" class="form-control" id="input-sexoMascota" placeholder="Sexo" required>
+                        </div>
+                      <div class="form-group">
+                            <label for="input-raza">Raza</label>
+                            <input type="text" class="form-control" id="input-raza" placeholder="Raza" required>
+                        </div>
+                        <input type="submit" class="btn btn-primary" id="register-btn" value="Registrar usuario" />
                     </form>
+                    <div id="register-error" class="alert alert-danger d-none" role="alert"></div>
+                    <a href="index.html">¿Ya tienes cuenta? Iniciar sesión</a>
                 </div>
-                <div class="formulario-registro">
-                    <form action="" id="formulario">
-                        <p class="block">
-                            <h3>Tus datos personales</h3>
-                        </p>
-                        <p id="grupo__nombre">
-                            <label for="nombre" class="formulario__label">Nombres*</label>
-                            <input type="text" class="formulario__input" name= "nombre" id="nombre"  placeholder="Nombres">
-                        </p>
-                        <p id="grupo__apellidos">
-                            <label for="apellidos" class="formulario__label">Apellidos*</label>
-                            <input type="text" class="formulario__input" name="apellidos" id="apellidos"  placeholder="Apellidos">
-                        </p>
-                        <p id="grupo__cedula">
-                            <label for="cedula" class="formulario__label">Cedula de Ciudadania*</label>
-                            <input type="text" class="formulario__input" name="cedula" id="cedula"  placeholder="C.C.">
-                        </p>
-                        <p id="grupo__email">
-                            <label for="email" class="formulario__label">Correo Electronico*</label>
-                            <input type="email" class="formulario__input" name="email" id="email" placeholder="@gmail.com">
-                        </p>
-                        <p id="grupo__direccion">
-                            <label for="direccion" class="formulario__label">Direccion*</label>
-                            <input type="text" class="formulario__input" name="direccion" id="direccion" placeholder="Direccion">
-                        </p>
-                        <p id="grupo__telefono">
-                            <label for="telefono" class="formulario__label">Telefono de Contacto*</label>
-                            <input type="tel" class="formulario__input" name="telefono" id="telefono" placeholder="Telefono"
-                                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                                    required>
-                        </p>
-                        <p id="grupo__nameUsuario">
-                            <label for="nameUsuario" class="formulario__label">Usuario*</label>
-                            <input type="text" class="formulario__input" name="nameUsuario" id="nameUsuario" placeholder="Nombre de usuario">
-                        </p>
-                        <p id="grupo__id1">
-                            <label for="pin" class="formulario__label">PIN*</label>
-                            <input type="text" class="formulario__input" name="pin" id="pin" placeholder="4 ultimos digitos de la C.C.">
-                        </p>
-                        <p id="grupo__id2">
-                                <label for="pin2" class="formulario__label">Confirmar PIN*</label>
-                                <div class="formulario__grupo-input">
-                                    <input type="text" class="formulario__input" name="pin2" id="pin2" placeholder="4 ultimos digitos de la C.C.">
-                                    <i class="form__validacion-estado fa fa-times-circle"></i>
-                                </div> 
-                                <p class="form__input-error">El PIN no coincide</p>
-                        </p>
-                        <p class="block">
-                            <h3 class="datos">Datos de tu mascota</h3>
-                        </p>
-                        <p id="grupo__nombreMascota">
-                            <label for="nombreMascota" class="formulario__label">Nombre*</label>
-                            <input type="text" class="formulario__input" name= "nombreMascota" id="nombreMascota" placeholder = "Nombre de la Mascota">
-                        </p>
-                        <p id="grupo__fechaNacimiento">
-                            <label for="fechaNacimiento" class="formulario__label">Fecha de Nacimiento*</label>
-                            <input type="date" class="formulario__input" name="fechaNacimiento" id="fechaNacimiento" placeholder="Fecha de nacimiento">
-                        </p>
-                        <p id="grupo__especie">
-                            <label for="especie" class="formulario__label">Especie*</label>
-                            <select class="opcion" name="especie" id="especie">
-                                <option value="0">Seleccione</option>
-                                <option value="1">Felino</option>
-                                <option value="2">Canino</option>
-                            </select>
-                        </p>
-                        <p id="grupo__raza">
-                            <label for="raza" class="formulario__label">Raza*</label>
-                            <input type="text" class="formulario__input" name="raza" id="raza" placeholder="Raza">
-                        </p>
-                        <p id="grupo__sexo">
-                            <label for="sexo" class="formulario__label">Sexo*</label>
-                            <select class="opcion" name="sexo" id="sexo">
-                                <option value="Seleccione">Seleccione</option>
-                                <option value="Hembra">Hembra</option>
-                                <option value="Macho">Macho</option>
-                            </select>
-                        </p>
-                        <p id="grupo__color">
-                            <label for="color" class="formulario__label">Color</label>
-                            <input type="text" class="formulario__input" name="color" id="color" placeholder="Color"> 
-                        </p>    
-                    </form>
-                    <section class="botonAgregar">
-                        <a href="#" class="fa fa-plus-circle"></a>
-                        <label for="agregar">Agregar una mascota</label>
-                    </section>
-                </div>
-            </div>
-        </div>
-
-        <script src="js/registro.js"></script>
-
+            </div> 
+        </main>
     </body>
 </html>
-

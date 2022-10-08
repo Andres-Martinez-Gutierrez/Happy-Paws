@@ -1,52 +1,65 @@
-div.header
+
+div.container-fluid-n
 {
-    width: 100%;
-    height:200px;
-    text-align:center;
+    position: relative;
+    display: inline-block;
+    text-align: center;
     background-color:#2e3c50;
-   
+    max-height:200px;
+    width: 100%;
+} 
+
+div.container-fluid-n h1{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
 }
 
-div.carousel-inner
-{
-    max-width:60%;
-    height:50px;
-    background-size: cover;
+div.carousel-inner{
+  max-width:2000px;
+  max-height:200px;
+  padding: 0% 10%;
+  
+ 
 }
-div.container-fluid{
-    width:100%;
-    height:200px;
-}
-div.container-header
-{
-    width:100%;
-    height:200px;
-    padding: 0px 300px;
-    
+
+div.carousel-inner img{
+  object-fit: cover;
+  width:100%;
+  height:100%;
+  
 }
 
 div.logo {
     width:200px;
-    float: left; 
     position:absolute;
-    z-index:1;
- 
+    top: 30%;
+    left: 0%;
 }
+
+
+div.navbar{left: 30%;}
+
+
+/* IMAGEN DE MASCOTA*/
 div.bg-login-image{
     background-image:url("../img/mascotas.png");
     background-position: center;
     background-size: cover;
     border: 2px;
-    height: 500px;
+    height: 400px;
+    padding:10% 10%;
 }
+
+/* FONDO DE EL LOGO*/
 div.bg-login-color{
-  background-color:#2e3c50;
-   color:white;
+    background-color:#2e3c50;
+    color:white;
 }
 
-    
 
-/*FOOTER*/
 
 div.footer{
     
@@ -54,14 +67,15 @@ div.footer{
     padding:50px 0px;
     background-image:url("../img/footer1.png");
     background-size: cover;
-    
+
 }
 div.container_footer{
     display:flex;
     flex-wrap:wrap;
     justify-content: space-between;
     max-width: 1200px;
-    margin: auto;
+    max-hight:300px;
+        margin: auto;
     margin-top:100px;
 }
 
@@ -69,7 +83,7 @@ div.box_footer{
     display:flex;
     flex-direction:column;
     padding: 40px;
-    
+
 }
 
 div.terms{

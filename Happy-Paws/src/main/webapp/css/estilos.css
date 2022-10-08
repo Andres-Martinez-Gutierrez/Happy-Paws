@@ -202,12 +202,6 @@ h4{
     transform: scale(1.2);
   }
 
-.formulario__grupo-input {
-	position: relative;
-    grid-column: 1 / 2;
-    padding: 7.175px;
-}
-
 /*Error*/
 .form__input-error{
     font-size: 1em;

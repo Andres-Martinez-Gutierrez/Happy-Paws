@@ -3,7 +3,6 @@ package controller;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import com.google.gson.Gson;
-import java.sql.Date;
 
 import beans.Usuario;
 import connection.DBConnection;
@@ -29,16 +28,15 @@ public class UsuarioController implements IUsuarioController {
                 String apellido = rs.getString("apellido");
                 String direccion = rs.getString("direccion");
                 String telefono = rs.getString("telefono");
-                String correo = rs.getString("email");
+                String email = rs.getString("email");
                 String nombreMascota = rs.getString("nombre_mascota");
                 String especie = rs.getString("especie");
-                Date fecha = rs.getDate("fecha_nacimiento");
                 String color = rs.getString("color");
                 String sexo = rs.getString("sexo");
                 String raza = rs.getString("raza");
 
                 Usuario usuario
-                        = new Usuario(userName, cedula, nombreUsuario, apellido, direccion, telefono, correo, pin, nombreMascota, especie, fecha, color, sexo, raza);
+                        = new Usuario(userName, cedula, nombreUsuario, apellido, direccion, telefono, email, pin, nombreMascota, especie, color, sexo, raza);
                 return gson.toJson(usuario);
             }
         } catch (Exception ex) {
@@ -51,23 +49,21 @@ public class UsuarioController implements IUsuarioController {
     }
 
     @Override
-    public String registrar(String username, String cedula,
-            String nombreUsuario, String apellido, String direccion, String telefono, String correo,
-            String pin, String nombreMascota,
-            String especie, Date fecha, String color, String sexo, String raza) {
+    public String register(String user_name, String cedula,
+            String nombre_usuario, String apellido, String direccion, String telefono, String email,
+            String pin, String nombre_mascota,
+            String especie, String color, String sexo, String raza) {
 
         Gson gson = new Gson();
 
         DBConnection con = new DBConnection();
-        String sql = "Insert into usuario values('" + username + "', '" + cedula + "', '" + nombreUsuario
-                + "', '" + apellido + "', '" + direccion + "', '" + telefono + "', '" + correo + "', '" + pin + "', "
-                + "'" + nombreMascota + "', '" + especie + "', " + fecha + ", '" + color + "', '" + sexo + "', '" + raza + "')";
+        String sql = "Insert into usuario values('" + user_name + "', '" + cedula + "', '" + nombre_usuario + "', '" + apellido + "', '" + direccion + "', '" + telefono + "', '" + email + "', '" + pin + "', '" + nombre_mascota + "', '" + especie + "', '" + color + "', '" + sexo + "', '" + raza + "')";
 
         try {
             Statement st = con.getConnection().createStatement();
             st.executeUpdate(sql);
 
-            Usuario usuario = new Usuario(username, cedula, nombreUsuario, apellido, direccion, telefono, correo, pin, nombreMascota, especie, fecha, color, sexo, raza);
+            Usuario usuario = new Usuario(user_name, cedula, nombre_usuario, apellido, direccion, telefono, email, pin, nombre_mascota, especie, color, sexo, raza);
 
             st.close();
 

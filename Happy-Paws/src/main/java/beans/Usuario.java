@@ -1,6 +1,6 @@
         
 package beans;
- import java.sql.Date;
+
 
 public class Usuario {
     
@@ -10,27 +10,25 @@ public class Usuario {
     private String apellido;
     private String direccion;
     private String telefono;
-    private String correo;
+    private String email;
     private String pin;
     private String nombreMascota;
     private String especie;
-    private Date fecha;            // Se importa como sql.Date
     private String color;
     private String sexo;
     private String raza;
 
-    public Usuario(String userName, String cedula, String nombreUsuario, String apellido, String direccion, String telefono, String correo, String pin, String nombreMascota, String especie, Date fecha, String color, String sexo, String raza) {
+    public Usuario(String userName, String cedula, String nombreUsuario, String apellido, String direccion, String telefono, String email, String pin, String nombreMascota, String especie, String color, String sexo, String raza) {
         this.userName = userName;
         this.cedula = cedula;
         this.nombreUsuario = nombreUsuario;
         this.apellido = apellido;
         this.direccion = direccion;
         this.telefono = telefono;
-        this.correo = correo;
+        this.email = email;
         this.pin = pin;
         this.nombreMascota = nombreMascota;
         this.especie = especie;
-        this.fecha = fecha;
         this.color = color;
         this.sexo = sexo;
         this.raza = raza;
@@ -84,12 +82,12 @@ public class Usuario {
         this.telefono = telefono;
     }
 
-    public String getCorreo() {
-        return correo;
+    public String getEmail() {
+        return email;
     }
 
-    public void setCorreo(String correo) {
-        this.correo = correo;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getPin() {
@@ -114,14 +112,6 @@ public class Usuario {
 
     public void setEspecie(String especie) {
         this.especie = especie;
-    }
-
-    public Date getFecha() {
-        return fecha;
-    }
-
-    public void setFecha(Date fecha) {
-        this.fecha = fecha;
     }
 
     public String getColor() {
@@ -150,10 +140,9 @@ public class Usuario {
 
     @Override
     public String toString() {
-        return "Usuario{" + "userName=" + userName + ", cedula=" + cedula + ", nombreUsuario=" + nombreUsuario + ", apellido=" + apellido + ", direccion=" + direccion + ", telefono=" + telefono + ", correo=" + correo + ", pin=" + pin + ", nombreMascota=" + nombreMascota + ", especie=" + especie + ", fecha=" + fecha + ", color=" + color + ", sexo=" + sexo + ", raza=" + raza + '}';
+        return "Usuario{" + "userName=" + userName + ", cedula=" + cedula + ", nombreUsuario=" + nombreUsuario + ", apellido=" + apellido + ", direccion=" + direccion + ", telefono=" + telefono + ", email=" + email + ", pin=" + pin + ", nombreMascota=" + nombreMascota + ", especie=" + especie + ", color=" + color + ", sexo=" + sexo + ", raza=" + raza + '}';
     }
 
-   
-   
     
+
 }
